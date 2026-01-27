@@ -426,7 +426,7 @@ export function HeroSection() {
               className="flex items-center gap-5 sm:gap-6 text-zinc-500 pt-4 sm:pt-8"
             >
               <a 
-                href="https://github.com" 
+                href="https://github.com/mzainsaeed7" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="hover:text-white transition-colors"
@@ -435,7 +435,7 @@ export function HeroSection() {
                 <Github className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/zain-saeed-8073563a8/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="hover:text-white transition-colors"
@@ -444,7 +444,7 @@ export function HeroSection() {
                 <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a 
-                href="mailto:contact@example.com" 
+                href="mailto:zainsaeed761@gmail.com" 
                 className="hover:text-white transition-colors"
                 aria-label="Email Contact"
               >

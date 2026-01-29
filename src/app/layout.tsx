@@ -19,12 +19,12 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-import { PERSONAL_INFO } from "@/lib/constants";
+import { PERSONAL_INFO, SEO_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: `${PERSONAL_INFO.name} | ${PERSONAL_INFO.role}`,
   description: PERSONAL_INFO.bio,
-  keywords: ["Mobile App Developer", "Flutter Developer", "React Native", "Android", "iOS", "Full Stack Developer"],
+  keywords: SEO_CONFIG.keywords,
   authors: [{ name: PERSONAL_INFO.name }],
 };
 

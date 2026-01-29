@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from "react-icons/fi";
-import { SOCIAL_LINKS } from "@/lib/constants";
+import { PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/constants";
 
 const footerLinks = [
     { href: "#home", label: "Home" },
@@ -80,7 +80,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-text-muted text-sm">
-                        © {currentYear} Your Name. All rights reserved.
+                        © {currentYear} {PERSONAL_INFO.name}. All rights reserved.
                     </p>
 
                     <motion.button

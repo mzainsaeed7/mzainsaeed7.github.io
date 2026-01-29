@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import { HeroCanvas } from "@/components/three/HeroCanvas";
 import { Github, Linkedin, Mail, ArrowDown, ExternalLink, Terminal } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
-import { PERSONAL_INFO } from "@/lib/constants";
+import { PERSONAL_INFO, SOCIAL_LINKS, TECH_STACK } from "@/lib/constants";
 
 export function HeroSection() {
   const { scrollY } = useScroll();
@@ -13,19 +13,19 @@ export function HeroSection() {
 
   const codeLines = [
     `class Developer {`,
-    `  final String name = 'Muhammad Zain';`,
-    `  final String role = 'Mobile App Developer';`,
+    `  final String name = '${PERSONAL_INFO.name}';`,
+    `  final String role = '${PERSONAL_INFO.role}';`,
     ``,
     `  // Primary: Mobile Development`,
     `  final List<String> mobileStack = [`,
-    `    'Flutter', 'Dart',`,
-    `    'Android', 'iOS'`,
+    `    '${TECH_STACK.mobile[0]}', '${TECH_STACK.mobile[1]}',`,
+    `    '${TECH_STACK.mobile[2]}', '${TECH_STACK.mobile[3]}'`,
     `  ];`,
     ``,
     `  // Secondary: Full Stack`,
     `  final List<String> webStack = [`,
-    `    'Node.js', 'Express',`,
-    `    'React', 'Next.js'`,
+    `    '${TECH_STACK.web[0]}', '${TECH_STACK.web[1]}',`,
+    `    '${TECH_STACK.web[2]}', '${TECH_STACK.web[3]}'`,
     `  ];`,
     `}`
   ];
@@ -229,8 +229,8 @@ export function HeroSection() {
             className="lg:col-span-7 space-y-6 sm:space-y-8"
           >
             {/* Status Badge */}
-            <motion.div 
-              variants={fadeInUp} 
+            <motion.div
+              variants={fadeInUp}
               className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-zinc-900/50 backdrop-blur-md border border-zinc-800/50 hover:border-indigo-500/30 transition-colors cursor-default text-xs sm:text-sm"
             >
               <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
@@ -238,8 +238,8 @@ export function HeroSection() {
                 <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-green-500"></span>
               </span>
               <span className="font-medium text-zinc-300 tracking-wide">
-                <span className="hidden sm:inline">Available for new opportunities</span>
-                <span className="sm:hidden">Available for work</span>
+                <span className="hidden sm:inline">{PERSONAL_INFO.availability}</span>
+                <span className="sm:hidden">{PERSONAL_INFO.availabilityShort}</span>
               </span>
             </motion.div>
 
@@ -310,8 +310,8 @@ export function HeroSection() {
             </div>
 
             {/* Description */}
-            <motion.p 
-              variants={fadeInUp} 
+            <motion.p
+              variants={fadeInUp}
               className="text-sm sm:text-base md:text-lg text-zinc-400 max-w-lg leading-relaxed pt-2 sm:pt-4"
             >
               Building <span className="text-white font-semibold">polished mobile apps</span> and <span className="text-white font-semibold">scalable web solutions</span>.
@@ -352,7 +352,7 @@ export function HeroSection() {
                     <span className="text-zinc-700 select-none pr-2 sm:pr-3 text-right w-5 sm:w-6 flex-shrink-0">2</span>
                     <div className="text-zinc-300 pl-3 sm:pl-4">
                       <span className="text-purple-400 font-medium">final</span>{" "}
-                      <span className="text-yellow-400">String</span> name = <span className="text-green-400">&apos;Muhammad Zain&apos;</span>;
+                      <span className="text-yellow-400">String</span> name = <span className="text-green-400">&apos;{PERSONAL_INFO.name}&apos;</span>;
                     </div>
                   </div>
                   <div className="flex">
@@ -398,8 +398,8 @@ export function HeroSection() {
             </motion.div>
 
             {/* Actions */}
-            <motion.div 
-              variants={fadeInUp} 
+            <motion.div
+              variants={fadeInUp}
               className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-5 pt-4 sm:pt-8"
             >
               <a
@@ -421,30 +421,30 @@ export function HeroSection() {
             </motion.div>
 
             {/* Social Proof */}
-            <motion.div 
-              variants={fadeInUp} 
+            <motion.div
+              variants={fadeInUp}
               className="flex items-center gap-5 sm:gap-6 text-zinc-500 pt-4 sm:pt-8"
             >
-              <a 
-                href="https://github.com/mzainsaeed7" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={SOCIAL_LINKS.github}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
                 aria-label="GitHub Profile"
               >
                 <Github className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
-              <a 
-                href="https://www.linkedin.com/in/zain-saeed-8073563a8/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={SOCIAL_LINKS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
-              <a 
-                href="mailto:zainsaeed761@gmail.com" 
+              <a
+                href={SOCIAL_LINKS.email}
                 className="hover:text-white transition-colors"
                 aria-label="Email Contact"
               >

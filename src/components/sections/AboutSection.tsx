@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Coffee, Sparkles } from "lucide-react";
 import Image from "next/image";
-import { PERSONAL_INFO } from "@/lib/constants";
+import { PERSONAL_INFO, TECH_STACK } from "@/lib/constants";
 
 export function AboutSection() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -48,8 +48,8 @@ export function AboutSection() {
 
                                 {/* Image */}
                                 <Image
-                                    src="/zain.png"
-                                    alt="Zain - Mobile App Developer"
+                                    src={PERSONAL_INFO.profileImage}
+                                    alt={`${PERSONAL_INFO.name} - ${PERSONAL_INFO.role}`}
                                     fill
                                     className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
                                     priority
@@ -117,7 +117,7 @@ export function AboutSection() {
 
                             {/* Tech Stack Pills */}
                             <div className="flex flex-wrap gap-2 pt-2">
-                                {['Flutter', 'React', 'Node.js', 'TypeScript', 'Firebase'].map((tech, index) => (
+                                {TECH_STACK.featured.map((tech, index) => (
                                     <motion.span
                                         key={tech}
                                         initial={{ opacity: 0, scale: 0.8 }}

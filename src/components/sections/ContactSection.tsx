@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView, useSpring, Variants } from "framer-motion";
 import { FiGithub, FiLinkedin, FiCopy, FiCheck } from "react-icons/fi";
-import { PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/constants";
+import { PERSONAL_INFO, SOCIAL_LINKS, SITE_CONFIG } from "@/lib/constants";
 
 function MagneticButton({ children, href, className = "" }: { children: React.ReactNode; href?: string; className?: string }) {
     const ref = useRef<HTMLDivElement>(null);
@@ -187,9 +187,9 @@ export function ContactSection() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-zinc-500 text-xs sm:text-sm">
                     <p className="text-center md:text-left">© {currentYear} {PERSONAL_INFO.name}. All rights reserved.</p>
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 md:gap-8 text-center">
-                        <span className="hover:text-white transition-colors cursor-pointer">Karāchi, Pakistan</span>
+                        <span className="hover:text-white transition-colors cursor-pointer">{PERSONAL_INFO.locationShort}</span>
                         <span className="hover:text-white transition-colors cursor-pointer hidden sm:inline">
-                            Local Time: {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Karachi' })}
+                            Local Time: {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: SITE_CONFIG.timezone })}
                         </span>
                     </div>
                 </div>

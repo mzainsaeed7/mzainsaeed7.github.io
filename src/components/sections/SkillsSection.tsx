@@ -3,60 +3,9 @@
 import { useRef } from "react";
 import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
+import { skillCategories, type Skill } from "@/data/skills";
 
-// Skills with actual logo paths from /public/skills/
-const skillCategories = [
-    {
-        id: "mobile",
-        name: "Mobile Development",
-        skills: [
-            { name: "Flutter", logo: "/skills/flutter.png", level: 90 },
-            { name: "Dart", logo: "/skills/dart.png", level: 90 },
-            { name: "Android (Java)", logo: "/skills/android.png", level: 70 },
-            { name: "IOS (Swift)", logo: "/skills/ios.png", level: 70 },
-            { name: "Kotlin", logo: "/skills/kotlin.png", level: 70 },
-            { name: "REST API", logo: "/skills/rest_api.png", level: 95 },
-        ],
-    },
-    {
-        id: "frontend",
-        name: "Web & Frontend",
-        skills: [
-            { name: "Next.js", logo: "/skills/nextjs.png", level: 60 },
-            { name: "React", logo: "/skills/react.webp", level: 60 },
-            { name: "TypeScript", logo: "/skills/typescript.png", level: 50 },
-            { name: "Tailwind CSS", logo: "/skills/tailwindcss.png", level: 65 },
-        ],
-    },
-    {
-        id: "backend",
-        name: "Backend & Databases",
-        skills: [
-            { name: "Node.js", logo: "/skills/nodejs.webp", level: 60 },
-            { name: "Express.js", logo: "/skills/expressjs.png", level: 60 },
-            { name: "Laravel", logo: "/skills/laravel.png", level: 70 },
-            { name: "REST APIs", logo: "/skills/rest_api.png", level: 65 },
-            { name: "PostgreSQL", logo: "/skills/postgresql.webp", level: 70 },
-            { name: "MongoDB", logo: "/skills/mongodb.png", level: 70 },
-            { name: "MySQL", logo: "/skills/mysql.webp", level: 80 },
-            { name: "Firebase", logo: "/skills/firebase.png", level: 85 },
-        ],
-    },
-    {
-        id: "tools",
-        name: "Tools & Workflow",
-        skills: [
-            { name: "Android Studio", logo: "/skills/android_studio.png", level: 90 },
-            { name: "Git & GitHub", logo: "/skills/github.webp", level: 80 },
-            { name: "VS Code", logo: "/skills/vscode.png", level: 95 },
-            { name: "Postman", logo: "/skills/postman.webp", level: 85 },
-            { name: "Jira", logo: "/skills/jira.png", level: 85 },
-            { name: "Slack", logo: "/skills/slack.png", level: 95 },
-        ],
-    },
-];
-
-const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
+const SkillCard = ({ skill, index }: { skill: Skill; index: number }) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(cardRef, { once: true, margin: "-50px" });
 
@@ -157,7 +106,7 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => {
                         {/* Logo */}
                         <div className="absolute inset-2 rounded-full bg-zinc-800/50 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 border border-zinc-700/30">
                             <Image
-                                src={skill.logo}
+                                src={skill.image ?? "/skills/vscode.png"}
                                 alt={skill.name}
                                 width={80}
                                 height={80}

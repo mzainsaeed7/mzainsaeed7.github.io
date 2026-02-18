@@ -12,58 +12,51 @@ export interface Experience {
 
 export const experiences: Experience[] = [
     {
-        id: "tekrevol",
-        company: "TekRevol Pakistan",
+        id: "freelance",
+        company: "Freelance Upwork/Fiverr",
         logo: "/companies/tekrevol.png", // User needs to provide this or we use text fallback
-        role: "Mobile Application Developer",
+        role: "Full Stack  Developer",
         period: "Jan 2024 - Present",
-        duration: "2 yrs 1 mo", // Total duration at company or just this role? User text says "4 yrs total", "Jan 2024 - Present" for this role. I'll stick to role specific or calculate? The user text says "Jan 2024 - Present . 2 yrs 1 mo" which implies current date is 2026! Wait, my system time is 2026. Okay I will use the text provided exactly.
-        location: "Karāchi, Sindh, Pakistan · On-site",
-        description: "Dart, Object-Oriented Programming (OOP) and +23 skills",
+        duration: "2 years 2 months", // Total duration at company or just this role? User text says "4 yrs total", "Jan 2024 - Present" for this role. I'll stick to role specific or calculate? The user text says "Jan 2024 - Present . 2 yrs 1 mo" which implies current date is 2026! Wait, my system time is 2026. Okay I will use the text provided exactly.
+        location: "Karāchi, Sindh, Pakistan · Remote",
+        description: "I built mobile and web apps for clients on Upwork and Fiverr. I handled development and client communication from start to finish.",
+        skills: ["Flutter", "Dart", "Node.js", "Express.js", "Next JS", "Laravel", "PHP", "Team Management", "OOP"],
+    },
+    {
+        id: "ms-global",
+        company: "MS Global Inc.",
+        logo: "/companies/tekrevol.png", // User needs to provide this or we use text fallback
+        role: "Flutter  Developer",
+        period: "March 2023 - Dec 2023",
+        duration: "10 months", // Total duration at company or just this role? User text says "4 yrs total", "Jan 2024 - Present" for this role. I'll stick to role specific or calculate? The user text says "Jan 2024 - Present . 2 yrs 1 mo" which implies current date is 2026! Wait, my system time is 2026. Okay I will use the text provided exactly.
+        location: "Karāchi, Sindh, Pakistan · On Site",
+        description: "I worked on Flutter apps used by real users. I added features, fixed bugs, and worked with the team to deliver updates on time.",
         skills: ["Flutter", "Dart", "Team Management", "OOP"],
     },
+
     {
-        id: "tekrevol-flutter",
-        company: "TekRevol Pakistan",
-        logo: "/companies/tekrevol.png",
-        role: "Flutter Developer",
-        period: "Feb 2022 - Jan 2024",
-        duration: "2 yrs",
-        location: "Karāchi, Sindh, Pakistan · On-site",
-        description: "Team Coordination and Team Management",
-        skills: ["Flutter", "Team Coordination", "Mobile Dev"],
-    },
-    {
-        id: "odd-senior",
-        company: "Odd Technologies (Private) Limited",
-        logo: "/companies/odd.png",
-        role: "Senior Flutter Developer",
-        period: "Apr 2021 - Jan 2022",
-        duration: "10 mos",
-        location: "Karāchi, Sindh, Pakistan · On-site",
-        description: "Team Coordination and Team Management",
-        skills: ["Flutter", "Leadership", "Architecture"],
-    },
-    {
-        id: "odd-flutter",
-        company: "Odd Technologies (Private) Limited",
-        logo: "/companies/odd.png",
-        role: "Flutter Developer",
-        period: "Mar 2020 - Apr 2021",
-        duration: "1 yr 2 mos",
-        location: "Karāchi, Sindh, Pakistan · On-site",
-        description: "Cross-platform Development and Dart",
-        skills: ["Flutter", "Dart", "Cross-platform"],
-    },
-    {
-        id: "techrise",
-        company: "TechRise",
-        logo: "/companies/techrise.png",
+        id: "softologics",
+        company: "Softologics",
+        logo: "/companies/softologics.png", // User needs to provide this or we use text fallback
         role: "Android Developer",
-        period: "Mar 2019 - Feb 2020",
-        duration: "1 yr",
-        location: "Karāchi, Sindh, Pakistan",
-        description: "Full-time Android Development",
-        skills: ["Android", "Java", "Kotlin"],
+        period: "Jan 2022 - Feb 2023",
+        duration: "1 year 2 months", // Total duration at company or just this role? User text says "4 yrs total", "Jan 2024 - Present" for this role. I'll stick to role specific or calculate? The user text says "Jan 2024 - Present . 2 yrs 1 mo" which implies current date is 2026! Wait, my system time is 2026. Okay I will use the text provided exactly.
+        location: "Karāchi, Sindh, Pakistan · On Site",
+        description: "I built Flutter apps from requirements to final release. I focused on clean UI, reusable code, and smooth app performance.",
+        skills: ["Flutter", "Dart", "Team Management", "OOP"],
+
+    },
+
+    {
+        id: "softologics",
+        company: "Softologics",
+        logo: "/companies/softologics.png", // User needs to provide this or we use text fallback
+        role: "Android Developer",
+        period: "Jan 2021 - Jan 2022",
+        duration: "1 year", // Total duration at company or just this role? User text says "4 yrs total", "Jan 2024 - Present" for this role. I'll stick to role specific or calculate? The user text says "Jan 2024 - Present . 2 yrs 1 mo" which implies current date is 2026! Wait, my system time is 2026. Okay I will use the text provided exactly.
+        location: "Karāchi, Sindh, Pakistan · On Site",
+        description: "I developed Android apps in Java and connected them with APIs. I also improved app speed and kept the code clean.",
+        skills: ["Android", "Java", "Team Management", "OOP"],
     },
 ];
+

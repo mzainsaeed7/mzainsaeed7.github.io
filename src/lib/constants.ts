@@ -34,7 +34,7 @@ export const PERSONAL_INFO = {
 // Social Links
 export const SOCIAL_LINKS = {
     github: "https://github.com/mzainsaeed7",
-    linkedin: "https://www.linkedin.com/in/zain-saeed-8073563a8/",
+    linkedin: "https://www.linkedin.com/in/zain-saeed-a482361b6/",
     email: "mailto:zainsaeed761@gmail.com",
 };
 
